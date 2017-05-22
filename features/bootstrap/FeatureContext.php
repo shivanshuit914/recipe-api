@@ -16,6 +16,11 @@ class FeatureContext implements Context
     private $response;
 
     /**
+     * @var Recipe
+     */
+    private $recipe;
+
+    /**
      * Initializes context.
      *
      * Every scenario gets its own context instance.
@@ -31,7 +36,7 @@ class FeatureContext implements Context
      */
     public function aRecipeWithIdAndTitle(int $id, string $title)
     {
-        Recipe::withIdAndTitle($id, $title);
+        $this->recipe = Recipe::withIdAndTitle($id, $title);
     }
 
     /**
@@ -55,27 +60,31 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given Recipe belongs to :arg1 cuisine
+     * @Given Recipe belongs to :cuisine cuisine
      */
-    public function recipeBelongsToCuisine($arg1)
+    public function recipeBelongsToCuisine(string $cuisine)
     {
-        throw new PendingException();
+        $this->recipe->belongsTo($cuisine);
     }
 
     /**
-     * @When I look for recipe belongs to :arg1 cuisine
+     * @When I look for recipe belongs to :cuisine cuisine
      */
-    public function iLookForRecipeBelongsToCuisine($arg1)
+    public function iLookForRecipeBelongsToCuisine(string $cuisine)
     {
-        throw new PendingException();
+        $recipeLister = new RecipeLister(new RecipeRepository());
+        $this->response = $recipeLister->listByCuisine($cuisine);
     }
 
     /**
-     * @Then All recipes with indian cuisine will be returned
+     * @Then All recipes with :cuisine cuisine will be returned
      */
-    public function allRecipesWithIndianCuisineWillBeReturned()
+    public function allRecipesWithIndianCuisineWillBeReturned(string $cuisine)
     {
-        throw new PendingException();
+        PHPUnit_Framework_Assert::assertCount(2, $this->response);
+        foreach ($this->response as $response) {
+            PHPUnit_Framework_Assert::assertEquals($cuisine, $response[23]);
+        }
     }
 
     /**

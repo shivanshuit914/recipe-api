@@ -51,9 +51,24 @@ class RecipeController
         }
     }
 
-    public function getRecipesByCuisine()
+    public function getRecipesByCuisine($request, $response, array $params)
     {
-
+        try {
+            $recipeLister = new RecipeLister(
+                new RecipeRepository()
+            );
+            $recipeData = $recipeLister->listByCuisine($params['cuisine']);
+            return $this->response->withJson([
+                'success' => true,
+                'message' => 'Recipes found',
+                'recipeData' => $recipeData
+            ], 200);
+        } catch (Exception $exception) {
+            return $this->response->withJson([
+                'success' => false,
+                'message' => $exception->getMessage()
+            ], 200);
+        }
     }
 
     public function rateRecipe()

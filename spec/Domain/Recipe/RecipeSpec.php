@@ -13,13 +13,19 @@ class RecipeSpec extends ObjectBehavior
         $this->beConstructedWithIdAndTitle(1, 'title');
     }
 
-    public function it_exposes_id()
+    function it_exposes_id()
     {
         $this->getId()->shouldReturn(1);
     }
 
-    public function it_exposes_title()
+    function it_exposes_title()
     {
         $this->getTitle()->shouldReturn('title');
+    }
+
+    function it_exposes_cuisine()
+    {
+        $this->belongsTo('asian');
+        $this->getCuisine()->shouldReturn('asian');
     }
 }

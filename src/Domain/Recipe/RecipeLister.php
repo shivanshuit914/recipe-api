@@ -34,4 +34,19 @@ class RecipeLister
 
         return $result;
     }
+
+    /**
+     * @param string $cuisine
+     * @return mixed
+     * @throws Exception
+     */
+    public function listByCuisine(string $cuisine)
+    {
+        $result = $this->recipeRepository->fetchByCuisine($cuisine);
+        if (empty($result)) {
+            throw new Exception('No recipe found for cuisine : '. $cuisine);
+        }
+
+        return $result;
+    }
 }

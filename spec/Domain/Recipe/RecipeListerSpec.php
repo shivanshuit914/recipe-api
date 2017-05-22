@@ -18,4 +18,14 @@ class RecipeListerSpec extends ObjectBehavior
         $recipeRepository->fetchById(1)->willReturn(['id' => 1]);
         $this->listById(1)->shouldHaveCount(1);
     }
+
+    function it_lists_recipes_by_cuisine(RecipeRepository $recipeRepository)
+    {
+        $return = [
+            ['id' => 1 , 'title' => 'recipe 1', 'cuisine' => 'asian'],
+            ['id' => 2 , 'title' => 'recipe 2', 'cuisine' => 'asian'],
+        ];
+        $recipeRepository->fetchByCuisine('asian')->willReturn($return);
+        $this->listByCuisine('asian')->shouldHaveCount(2);
+    }
 }

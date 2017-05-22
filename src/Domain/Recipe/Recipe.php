@@ -8,10 +8,16 @@ class Recipe
      * @var int
      */
     private $id;
+
     /**
      * @var string
      */
     private $title;
+
+    /**
+     * @var string
+     */
+    private $cuisine;
 
     /**
      * Recipe constructor.
@@ -48,5 +54,21 @@ class Recipe
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * @param string $cuisine
+     */
+    public function belongsTo(string $cuisine) : void
+    {
+        $this->cuisine = $cuisine;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCuisine() : string
+    {
+        return $this->cuisine;
     }
 }

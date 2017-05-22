@@ -8,10 +8,10 @@ Feature: API
     | 1   | Sweet Chilli and Lime Beef on a Crunchy Fresh Noodle Salad | asian   |
 
   Scenario: Fetch all recipe for specific cuisine with limit
-    Given A recipe with id "1" and title "My special recipe"
-    And Recipe belongs to "indian" cuisine
-    When I look for recipe belongs to "indian" cuisine
-    Then All recipes with indian cuisine will be returned
+    Given A recipe with id "1" and title "Sweet Chilli and Lime Beef on a Crunchy Fresh Noodle Salad"
+    And Recipe belongs to "asian" cuisine
+    When I look for recipe belongs to "asian" cuisine
+    Then All recipes with "asian" cuisine will be returned
 
   Scenario: Rate recipe
     Given A recipe with id "1" and title = "My special recipe"
