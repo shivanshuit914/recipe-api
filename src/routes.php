@@ -1,10 +1,9 @@
 <?php
 // Routes
-
-$app->get('/[{name}]', function ($request, $response, $args) {
-    // Sample log message
-    $this->logger->info("Slim-Skeleton '/' route");
-
-    // Render index view
-    return $this->renderer->render($response, 'index.phtml', $args);
+$app->group('/v1', function () {
+    $this->post('/recipe/', 'RecipeController:addRecipe');
+    $this->put('/recipe/{id}', 'RecipeController:updateRecipe');
+    $this->get('/recipe/{id}', 'RecipeController:getRecipeById');
+    $this->get('/recipes/cuisine/{name}/limit/{number}', 'RecipeController:getRecipesByCuisine');
+    $this->post('/recipe/rate', 'RecipeController:rateRecipe');
 });
