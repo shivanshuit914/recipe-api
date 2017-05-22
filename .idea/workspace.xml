@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537f3830-80f4-46ea-96c4-8f51f42234d1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/Domain/Recipe/RecipeManagerSpec.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Domain/Recipe/RecipeManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/api.feature" afterPath="$PROJECT_DIR$/features/api.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/features/bootstrap/FeatureContext.php" afterPath="$PROJECT_DIR$/features/bootstrap/FeatureContext.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/Domain/Recipe/RecipeListerSpec.php" afterPath="$PROJECT_DIR$/spec/Domain/Recipe/RecipeListerSpec.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/Domain/Recipe/RecipeSpec.php" afterPath="$PROJECT_DIR$/spec/Domain/Recipe/RecipeSpec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recipe-data.csv" afterPath="$PROJECT_DIR$/recipe-data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Controller/RecipeController.php" afterPath="$PROJECT_DIR$/src/Application/Controller/RecipeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php" afterPath="$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Recipe/Recipe.php" afterPath="$PROJECT_DIR$/src/Domain/Recipe/Recipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Recipe/RecipeLister.php" afterPath="$PROJECT_DIR$/src/Domain/Recipe/RecipeLister.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php" afterPath="$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes.php" afterPath="$PROJECT_DIR$/src/routes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="FeatureContext.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/bootstrap/FeatureContext.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="85" column="59" lean-forward="false" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
+            <state relative-caret-position="258">
+              <caret line="145" column="66" lean-forward="false" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
               <folding>
                 <element signature="e#7#51#0#PHP" expanded="true" />
               </folding>
@@ -39,18 +38,18 @@
       <file leaf-file-name="api.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/api.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="297">
+              <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecipeListerSpec.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/Domain/Recipe/RecipeListerSpec.php">
+      <file leaf-file-name="RecipeManagerSpec.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/Domain/Recipe/RecipeManagerSpec.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="28" column="44" lean-forward="false" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="202">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="e#38#82#0#PHP" expanded="true" />
               </folding>
@@ -58,11 +57,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RecipeManager.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RecipeRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
               <folding>
                 <element signature="e#42#67#0#PHP" expanded="true" />
               </folding>
@@ -70,44 +79,47 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="recipe-data.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recipe-data.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="379" lean-forward="false" selection-start-line="10" selection-start-column="379" selection-end-line="10" selection-end-column="379" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RecipeRepositoryInterface.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+            <state relative-caret-position="135">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecipeSpec.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/Domain/Recipe/RecipeSpec.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recipe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/Recipe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecipeController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RecipeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application/Controller/RecipeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+            <state relative-caret-position="108">
+              <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
               <folding>
                 <element signature="e#42#86#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="180">
+                <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -117,16 +129,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecipeLister.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeLister.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -147,17 +149,20 @@
       <list>
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/dependencies.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/spec/Domain/Recipe/RecipeSpec.php" />
         <option value="$PROJECT_DIR$/src/Domain/Recipe/Recipe.php" />
-        <option value="$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php" />
-        <option value="$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php" />
         <option value="$PROJECT_DIR$/spec/Domain/Recipe/RecipeListerSpec.php" />
         <option value="$PROJECT_DIR$/src/Domain/Recipe/RecipeLister.php" />
-        <option value="$PROJECT_DIR$/features/api.feature" />
-        <option value="$PROJECT_DIR$/features/bootstrap/FeatureContext.php" />
         <option value="$PROJECT_DIR$/src/routes.php" />
+        <option value="$PROJECT_DIR$/spec/Domain/Recipe/RecipeManagerSpec.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/src/Domain/Recipe/RecipeManager.php" />
+        <option value="$PROJECT_DIR$/features/api.feature" />
+        <option value="$PROJECT_DIR$/recipe-data.csv" />
+        <option value="$PROJECT_DIR$/features/bootstrap/FeatureContext.php" />
+        <option value="$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php" />
         <option value="$PROJECT_DIR$/src/Application/Controller/RecipeController.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -193,6 +198,16 @@
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipe-api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="recipe-api" />
@@ -360,7 +375,7 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="RecipeCon&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/src/Application/Controller/RecipeController.php&#10;fe&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/features/bootstrap/FeatureContext.php&#10;rou&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/src/routes.php&#10;Feat&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/features/bootstrap/FeatureContext.php" />
+    <property name="SearchEverywhereHistoryKey" value="Rea&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/README.md&#10;feat&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/features/api.feature&#10;READ&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/README.md&#10;RecipeCon&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/src/Application/Controller/RecipeController.php&#10;fe&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/features/bootstrap/FeatureContext.php&#10;rou&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/src/routes.php&#10;Feat&#9;FILE&#9;file:///Users/shivanshu/workspace/recipe-api/features/bootstrap/FeatureContext.php" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -450,12 +465,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1495456855095</updated>
-      <workItem from="1495456857474" duration="8087000" />
+      <workItem from="1495456857474" duration="10587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8087000" />
+    <option name="totallyTimeSpent" value="10587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="35" y="23" width="1245" height="777" extended-state="6" />
@@ -530,14 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recipe-data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dependencies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -546,39 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/Domain/Recipe/RecipeSpec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="41" column="13" lean-forward="true" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="e#42#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -609,24 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/api.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/bootstrap/FeatureContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="85" column="59" lean-forward="false" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-          <folding>
-            <element signature="e#7#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -635,13 +595,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="1019" column="9" lean-forward="false" selection-start-line="1019" selection-start-column="9" selection-end-line="1019" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/api.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recipe-data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="379" lean-forward="false" selection-start-line="10" selection-start-column="379" selection-end-line="10" selection-end-column="379" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/bootstrap/FeatureContext.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="145" column="66" lean-forward="false" selection-start-line="145" selection-start-column="66" selection-end-line="145" selection-end-column="66" />
+          <folding>
+            <element signature="e#7#51#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Repository/RecipeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="41" column="44" lean-forward="false" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="e#42#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Recipe/RecipeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/Domain/Recipe/RecipeManagerSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#38#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Controller/RecipeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+        <state relative-caret-position="108">
+          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
           <folding>
             <element signature="e#42#86#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

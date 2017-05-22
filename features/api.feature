@@ -26,6 +26,6 @@ Feature: API
       | 1   | Sweet Chilli and Lime Beef on a Crunchy Fresh Noodle Salad | asian   |
 
   Scenario: Create new recipe
-    Given A recipe with title "Best recipe"
+    Given A recipe with title "Best recipe" and cuisine "asian"
     When I create recipe record
     Then Recipe should be created

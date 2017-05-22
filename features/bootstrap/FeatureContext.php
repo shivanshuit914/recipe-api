@@ -7,6 +7,7 @@ use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Domain\Recipe\Recipe;
 use Domain\Recipe\RecipeLister;
+use Domain\Recipe\RecipeManager;
 
 /**
  * Defines application features from the specific context.
@@ -120,11 +121,11 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given A recipe with title :arg1
+     * @Given A recipe with title :title and cuisine :cuisine
      */
-    public function aRecipeWithTitle($arg1)
+    public function aRecipeWithTitleAndCuisine($title, $cuisine)
     {
-        throw new PendingException();
+        $this->recipe = ['title' => $title, 'cuisine' => $cuisine];
     }
 
     /**
@@ -132,7 +133,9 @@ class FeatureContext implements Context
      */
     public function iCreateRecipeRecord()
     {
-        throw new PendingException();
+        $recipeManager = new RecipeManager(new RecipeRepository());
+
+        $this->response = $recipeManager->create($this->recipe);
     }
 
     /**
@@ -140,6 +143,6 @@ class FeatureContext implements Context
      */
     public function recipeShouldBeCreated()
     {
-        throw new PendingException();
+        PHPUnit_Framework_Assert::assertNotEmpty($this->response);
     }
 }

@@ -4,6 +4,7 @@ namespace Application\Controller;
 
 use Application\Repository\RecipeRepository;
 use Domain\Recipe\RecipeLister;
+use Domain\Recipe\RecipeManager;
 use Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -83,7 +84,20 @@ class RecipeController
 
     public function addRecipe()
     {
-
+        try {
+            $requestBody = $this->request->getParsedBody();
+            $recipeManager = new RecipeManager(new RecipeRepository());
+            $recipeManager->create($requestBody['recipe']);
+            return $this->response->withJson([
+                'success' => true,
+                'message' => 'Recipe successfully added.'
+            ], 200);
+        } catch (Exception $exception) {
+            return $this->response->withJson([
+                'success' => false,
+                'message' => $exception->getMessage()
+            ], 200);
+        }
     }
 
 }
