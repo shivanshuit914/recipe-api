@@ -23,8 +23,10 @@ class RecipeManagerSpec extends ObjectBehavior
         $this->create(['title' => 'my new recipe', 'cuisine' => 'asian'])->shouldReturn($recipe);
     }
 
-    function it_updates_recipe()
+    function it_updates_recipe(RecipeRepository $recipeRepository)
     {
-
+        $recipeRepository->fetchById(1)->willReturn(['id' => 1 , 'title' => 'recipe 1', 'cuisine' => 'asian']);
+        $recipeRepository->update(1, ['title' => 'new recipe title'])->willReturn(1);
+        $this->update(1, ['title' => 'new recipe title'])->shouldReturn(1);
     }
 }

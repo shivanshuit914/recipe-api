@@ -14,12 +14,12 @@ Feature: API
     Then All recipes with "asian" cuisine will be returned
 
   Scenario: Rate recipe
-    Given A recipe with id "1" and title = "My special recipe"
+    Given A recipe with id "1" and title "My special recipe"
     When Someone gives rating between 1 to 5
     Then Rating should be added for that recipe
 
   Scenario: Update recipe
-    Given A recipe with id "1" and title = "My special recipe"
+    Given A recipe with id "1" and title "My special recipe"
     When I change title to "My special recipe new title"
     Then Recipe with below data will be returned:
       | id  | title                                                      | cuisine |

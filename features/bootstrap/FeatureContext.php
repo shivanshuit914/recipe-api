@@ -89,14 +89,6 @@ class FeatureContext implements Context
     }
 
     /**
-     * @Given A recipe with id :arg1 and title = :arg2
-     */
-    public function aRecipeWithIdAndTitle2($arg1, $arg2)
-    {
-        throw new PendingException();
-    }
-
-    /**
      * @When Someone gives rating between :arg1 to :arg2
      */
     public function someoneGivesRatingBetweenTo($arg1, $arg2)

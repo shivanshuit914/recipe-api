@@ -55,4 +55,9 @@ class RecipeRepository implements RecipeRepositoryInterface
 
         return $response;
     }
+
+    public function update(int $id, array $data)
+    {
+        return $id;
+    }
 }

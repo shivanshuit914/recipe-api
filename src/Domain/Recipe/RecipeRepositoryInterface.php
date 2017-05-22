@@ -10,4 +10,6 @@ interface RecipeRepositoryInterface
     public function add(array $recipe);
 
     public function fetchByCuisine(string $cuisine);
+
+    public function update(int $id, array $data);
 }

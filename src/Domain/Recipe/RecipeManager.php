@@ -17,7 +17,6 @@ class RecipeManager
      */
     public function __construct(RecipeRepositoryInterface $recipeRepository)
     {
-        // TODO: write logic here
         $this->recipeRepository = $recipeRepository;
     }
 
@@ -28,5 +27,14 @@ class RecipeManager
         }
 
         return $this->recipeRepository->add($recipeDetails);
+    }
+
+    public function update(int $id, array $recipeDetails)
+    {
+        if (empty($this->recipeRepository->fetchById($id))) {
+            throw new Exception('Recipe not found!');
+        }
+
+        return $this->recipeRepository->update($id, $recipeDetails);
     }
 }

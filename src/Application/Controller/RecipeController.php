@@ -2,7 +2,9 @@
 
 namespace Application\Controller;
 
+use Application\Repository\RatingRepository;
 use Application\Repository\RecipeRepository;
+use Domain\Recipe\Rating\RatingManager;
 use Domain\Recipe\RecipeLister;
 use Domain\Recipe\RecipeManager;
 use Exception;
@@ -74,12 +76,41 @@ class RecipeController
 
     public function rateRecipe()
     {
-
+        try {
+            $requestBody = $this->request->getParsedBody();
+            $recipeManager = new RatingManager(new RecipeRepository(), new RatingRepository());
+            $recipeManager->addRating(
+                $requestBody['recipe_rating']['id'],
+                $requestBody['recipe_rating']['rating']
+            );
+            return $this->response->withJson([
+                'success' => true,
+                'message' => 'Recipe rating successfully added.'
+            ], 200);
+        } catch (Exception $exception) {
+            return $this->response->withJson([
+                'success' => false,
+                'message' => $exception->getMessage()
+            ], 200);
+        }
     }
 
-    public function updateRecipe()
+    public function updateRecipe($request, $response, array $params)
     {
-
+        try {
+            $requestBody = $this->request->getParsedBody();
+            $recipeManager = new RecipeManager(new RecipeRepository());
+            $recipeManager->update((int)$params['id'], $requestBody['recipe']);
+            return $this->response->withJson([
+                'success' => true,
+                'message' => 'Recipe successfully updated.'
+            ], 200);
+        } catch (Exception $exception) {
+            return $this->response->withJson([
+                'success' => false,
+                'message' => $exception->getMessage()
+            ], 200);
+        }
     }
 
     public function addRecipe()
