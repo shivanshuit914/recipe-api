@@ -2,6 +2,9 @@
 
 namespace Application\Controller;
 
+use Application\Repository\RecipeRepository;
+use Domain\Recipe\RecipeLister;
+use Exception;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -28,9 +31,24 @@ class RecipeController
         $this->response = $response;
     }
 
-    public function getRecipeById()
+    public function getRecipeById($request, $response,array $params)
     {
-
+        try {
+            $recipeLister = new RecipeLister(
+                new RecipeRepository()
+            );
+            $recipeData = $recipeLister->listById((int)$params['id']);
+            return $this->response->withJson([
+                'success' => true,
+                'message' => 'Recipe found',
+                'recipeData' => $recipeData
+            ], 200);
+        } catch (Exception $exception) {
+            return $this->response->withJson([
+                'success' => false,
+                'message' => $exception->getMessage()
+            ], 200);
+        }
     }
 
     public function getRecipesByCuisine()
